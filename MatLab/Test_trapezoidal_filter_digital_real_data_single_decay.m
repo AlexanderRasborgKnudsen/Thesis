@@ -1,45 +1,8 @@
 clc; close all; clear all;
-SampleNo = 3000 ;
-LoopNumber =100 ;
-t=linspace(0,LoopNumber-1,LoopNumber);
-ts=linspace(0,SampleNo-1,SampleNo);
-
-z1=1000;
-t1=1000;
-
-spacing=1000;
- 
-dz1=zeros(1,z1);
-dz2=zeros(1,(spacing-1000));
-dz3=zeros(1,(spacing-1000));
-
-Decay_T=100;
-
-M= Decay_T - 0.5 ;
-
-d_rise = [1 2 3 4 5 6];
-
-signal = exp(-ts/Decay_T);  % single decaying pulse 
-Falltime = falltime( signal,ts);
-F = falltime(signal,'PercentReferenceLevels',[26.8 90]);
-
-%fig=[ dz1 d_rise 16*signal(1:1000)];
-% figure(3)
-% plot(fig)
-% title('Pulse with ramp and an exponential decay')
-% xlabel('Time')
-% ylabel('Voltage')
-% ylim([0 17])
-%d = [dz1 d_rise 16*signal(1:1000) dz2 d_rise 6*signal(1:1000) dz3 d_rise 8*signal(1:1000) dz3 d_rise 12*signal(1:1000)];% Amplitue of decay pulse
-d = [dz1 d_rise 16*signal dz2];
-%load adc1_10.txt
+%load Data
 load TPE_5_2_mod.txt
 data=TPE_5_2_mod;
 data=data';
-syms ts  tau
-F = int((exp(-ts/Decay_T)).^2, ts, 0, Inf)
-
-
 
 grid on
 figure(1)
@@ -51,12 +14,12 @@ grid on
 %pulse period
 Tpprd = 0.1;
 %clock period [usec]
-Tclk = 1./75;
+Tclk = 1./70;
 Tclkn = Tclk*1e-6;
 %high pass filter differentiation constant
-Taud = 35;
-Taupk = 30;
-Taupk_top = 50;
+Taud = 49;
+Taupk = 40;
+Taupk_top = 60;
 b10 = exp(-Tclk/Taud);
 na = (Taupk/Tclk);
 nad = na-3;
