@@ -1,6 +1,5 @@
-clc; close all; clear all;
-load TPE_5_2.txt
-data=TPE_5_2;
+function [xf1] = F_trapz_filter_digital_1(D)
+data=D;
 data=data';
 
 SampleNo = 9000 ;
@@ -18,7 +17,7 @@ plot(data)
 %pulse period
 Tpprd = 0.1;
 %clock period [usec]
-Tclk = 1./100;
+Tclk = 1./125;
 Tclkn = Tclk*1e-6;
 %high pass filter differentiation constant
 Taud = 3.5;
@@ -45,3 +44,6 @@ hz1=A*B*C*D;
 xf1=filter(hznum1,hzden1,data);
 subplot(2,1,2) % second subplot
 plot(xf1)
+
+end
+

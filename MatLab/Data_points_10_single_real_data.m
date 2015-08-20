@@ -1,14 +1,14 @@
 clc; close all; clear all;
 
 %Expresses the initial quantity
-load TPE_5_2_mod.txt
-data=TPE_5_2_mod(600:10828);
+load adc1_10.txt
+data=adc1_10(6200:16000);
 data=data';
 SampleNo = size(data,2);
 ts=linspace(0,SampleNo-1,SampleNo);
 
 %Moving Average Filter
- windowSize = 100;
+ windowSize = 50;
 b = (1/windowSize)*ones(1,windowSize);
 a = 1;
 y1 = filter(b,a,data);
@@ -36,6 +36,12 @@ figure(1)
 hold on
 plot(ts,dn,'r',ts,F(x,ts),'--')
 title('Estimation of the equation based on data points')
+%%
+% 
+%   for x = 1:10
+%       disp(x)
+%   end
+% 
 legend('Plot of function','Plot of estimated equation')
 xlabel('Time')
 ylabel('Voltage')
@@ -63,13 +69,13 @@ fprintf(['There were %d function evaluations using fminunc,' ...
 
 %filter parameters
 %pulse period
-Tpprd = 0.1;
+Tpprd = 100;
 %clock period [usec]
-Tclk = 1./80;
+Tclk = 1./50;
 Tclkn = Tclk*1e-6;
 %high pass filter differentiation constant
 val=1/x(2);
-Taupk = 30;
+Taupk = 3;
 Taupk_top = 50;
 b10 = exp(-val);
 na = (Taupk/Tclk);
