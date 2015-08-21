@@ -1,23 +1,23 @@
 clc; close all; clear all;
-load TPE_5_2_g2.txt
-Dat = TPE_5_2_g2;
-Dat = padarray(Dat,10000,2300);
-Dat = Dat - 2300;
+load TPE_9_3.txt
+Dat = TPE_9_3;
+Dat = padarray(Dat,10000,1900);
+Dat = Dat - 1900;
 
 %filter parameters
 %clock period [usec]
-tclk = 100;
+tclk = 70;
 %high pass filter differentiation constant
-taud = 27;
-taupk = 15;
-taupk_top = 25;
+taud = 40;
+taupk = 20;
+taupk_top = 40;
 
 [outp,M,val,z] = F_trapz_filter_digital_1(Dat,tclk,taud,taupk,taupk_top);
 
 figure(1)
 
 %subplot(2,1,1) % first subplot
-plot(Dat')
+plot(Dat)
 hold on
 %subplot(2,1,2) % second subplot
 plot(outp)
