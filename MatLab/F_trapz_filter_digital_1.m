@@ -1,4 +1,4 @@
-function [xf1,M,val,z] = F_trapz_filter_digital_1(Dat,tclk,taupk,taupk_top)
+function [xf1,M,val,z] = F_trapz_filter_digital_1(Dat,tclk,taud,taupk,taupk_top)
 data=Dat';
 
 [Max_val,Index]=max(data);
@@ -13,11 +13,11 @@ M=max(find(expp>=Max_val*0.3678));
 Tclk = 1./tclk;
 %Tclkn = Tclk*1e-6;
 %high pass filter differentiation constant
-%Taud = 40;
+Taud = taud;
 Taupk = taupk;
 Taupk_top = taupk_top;
-%val=Tclk/Taud;
-val=1/M;
+val=Tclk/Taud;
+%val=1/M;
 b10 = exp(-val);
 na = (Taupk/Tclk);
 %nad = na-3;
