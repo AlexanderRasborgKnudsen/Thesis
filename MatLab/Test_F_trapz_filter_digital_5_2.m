@@ -10,21 +10,17 @@ a = 1;
 y1 = filter(b,a,Dat);
 Data=y1;
 
-Data_fit = Data(340:end);
-Data_t = linspace(0,0.01,size(Data_fit,1))';
-f2 = fit(Data_t,Data_fit,'exp1')
-figure(1)
-plot(f2,Data_t,Data_fit);
+
 
 %filter parameters
 %clock period [usec]
-tclk = 70;
+tclk = 10;
 %high pass filter differentiation constant
-taud = 40;
-taupk = 20;
-taupk_top = 40;
+taupk = 10;
+taupk_top = 30;
+M = 4.192522265764161e-04;
 
-[outp,M,val,z] = F_trapz_filter_digital_1(Data,tclk,taud,taupk,taupk_top);
+[outp,val,hznumA, hzdenA,hznumB, hzdenB,hznumC, hzdenC,hznumD, hzdenD] = F_trapz_filter_digital_1(Data,tclk,M,taupk,taupk_top);
 
 figure(2)
 
