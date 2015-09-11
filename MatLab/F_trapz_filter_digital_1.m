@@ -1,4 +1,4 @@
-function [xf1,val,hznumA, hzdenA,hznumB, hzdenB,hznumC, hzdenC,hznumD, hzdenD] = F_trapz_filter_digital_1(Dat,tclk,M,taupk,taupk_top)
+function [xf1, val, hznumA, hzdenA, hznumB, hzdenB,hznumC, hzdenC, hznumD, hzdenD, na, nb] = F_trapz_filter_digital_1(Dat,tclk,M,taupk,taupk_top)
 data=Dat';
 
 [Max_val,Index]=max(data);

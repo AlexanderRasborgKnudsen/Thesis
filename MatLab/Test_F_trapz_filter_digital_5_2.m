@@ -1,8 +1,8 @@
 clc; close all; clear all;
-load TPE_9_3.txt
-Dat = TPE_9_3;
+load TPE_38_1_mod.txt
+Dat = TPE_38_1_mod;
 %Dat = padarray(Dat,10000,1900);
-Dat = Dat - 1900;
+Dat = Dat - 1700;
 
  windowSize = 200;
 b = (1/windowSize)*ones(1,windowSize);
@@ -20,7 +20,7 @@ taupk = 10;
 taupk_top = 30;
 M = 4.192522265764161e-04;
 
-[outp,val,hznumA, hzdenA,hznumB, hzdenB,hznumC, hzdenC,hznumD, hzdenD] = F_trapz_filter_digital_1(Data,tclk,M,taupk,taupk_top);
+[outp,val,hznumA, hzdenA,hznumB, hzdenB,hznumC, hzdenC,hznumD, hzdenD, na, nb] = F_trapz_filter_digital_1(Data,tclk,M,taupk,taupk_top);
 
 figure(2)
 
@@ -28,6 +28,8 @@ figure(2)
 plot(Data)
 hold on
 %subplot(2,1,2) % second subplot
+diff_output = diff(outp);
+plot(diff_output)
 plot(outp)
 title('TPE_5_2')
 xlabel('Time')
