@@ -1,0 +1,78 @@
+#include <stdio.h>
+//#include "platform.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "XScuTimer.h"
+//#include "led_ip.h"
+#include "stdio.h"
+//#include "matrix_ip.h"
+#include "Diff.h"
+#include "Hysterese.h"
+#include "Trapez_filter.h"
+#include "Energy_Calc.h"
+
+using namespace std;
+
+//====================================================
+#define ONE_SECOND 333000000 // half of the CPU clock speed
+
+// Matrix size
+#define MSIZE 4
+
+short input[12164] =
+{
+#include "TPE_38_1_mod_3.txt"
+};
+
+
+
+int main(void)
+{
+		const static short FILE_SIZE = 12164;
+		// Create instance of Trapez_filter
+		Trapez_filter myFilter = Trapez_filter();
+		Energy CalcEnergy = Energy();
+		Diff Difference = Diff();
+		Hysterese myHysterese = Hysterese();
+
+		// Load a datafile from the directory of the main file
+		//std::ifstream infile("TPE_38_1_mod_3.txt");
+
+		// Array for the output data
+		short result[FILE_SIZE];
+		short energyPeak = 0;
+		short differentiate = 0;
+		short hysterese = 0;
+		short energyAvg = 0;
+
+		// Initialization of the variable
+		memset(result, 0, FILE_SIZE);
+		short a;
+
+		// Reading the file line by line with the seperator ","
+		for (int i = 0; i < (FILE_SIZE); i++) {
+			// output of the filter i stored in the result array
+			a = input[i];
+			a = a - 1500;
+	 		result[i] = myFilter.filter(a);
+			differentiate = Difference.diff(result[i], result[std::max(i - 1, 0)]);
+			hysterese = myHysterese.hyst(differentiate);
+			energyPeak = CalcEnergy.energyState(hysterese, result[i]);
+			if (energyPeak != -1) {
+				energyAvg = energyPeak;
+			}
+
+		}
+
+		//ofstream myfile;
+		//myfile.open("Result.csv");
+
+		//myfile << energyAvg << endl;
+
+		//for (int i = 0; i < (FILE_SIZE-1); i++) {
+		//	myfile << result[i] << endl;
+		//}
+
+		//myfile.close();
+		return 0;
+}

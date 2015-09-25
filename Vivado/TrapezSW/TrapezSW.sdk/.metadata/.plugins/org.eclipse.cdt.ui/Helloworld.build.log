@@ -1,0 +1,6 @@
+10:44:56 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+
+10:44:56 Build Finished (took 130ms)
+

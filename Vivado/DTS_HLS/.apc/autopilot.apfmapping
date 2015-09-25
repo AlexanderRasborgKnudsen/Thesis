@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="DTS_energy.h" path="C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_CPP\src\DTS_energy.h"/>
+    <originFiles name="TPE_38_1_mod_3.txt" path="C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_CPP\src\TPE_38_1_mod_3.txt"/>
+    <originFiles name="Tools.h" path="C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_CPP\src\Tools.h"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_CPP\src\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

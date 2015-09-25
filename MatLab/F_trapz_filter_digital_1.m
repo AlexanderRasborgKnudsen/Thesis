@@ -1,4 +1,4 @@
-function [xf1, val, hznumA, hzdenA, hznumB, hzdenB,hznumC, hzdenC, hznumD, hzdenD, na, nb] = F_trapz_filter_digital_1(Dat,tclk,M,taupk,taupk_top)
+function [xf1] = F_trapz_filter_digital_1(Dat,na,nb,b10)
 data=Dat';
 
 [Max_val,Index]=max(data);
@@ -8,23 +8,23 @@ expp=data(Index:end);
 
 
 %% filter parameters
-
+tclk = 10;
 %clock period [usec]
 Tclk = 1./tclk;
 %Tclkn = Tclk*1e-6;
 %high pass filter differentiation constant
 %Taud = taud;
-Taupk = taupk;
-Taupk_top = taupk_top;
+%Taupk = taupk;
+%Taupk_top = taupk_top;
 %val=Tclk/Taud;
-T_decay = -242.7;
+%T_decay = -242.7;
 %val = 1/M;
-val=M;
+%val=M;
 %b10 = exp(-1/T_decay);
-b10 = exp(-val);
-na = (Taupk/Tclk);
+%b10 = exp(-val);
+%na = (Taupk/Tclk);
 %nad = na-3;
-nb = (Taupk_top+Taupk)/Tclk;
+%nb = (Taupk_top+Taupk)/Tclk;
 %nbd = nb-3;
 z = tf('z', Tclk);
 % Trapezoidal filter Z-transfer function
@@ -32,7 +32,7 @@ A=(1-b10*z^-1);
 B=( (1-z^-na)/(1-z^-1));
 C=( (1-z^-nb)/(1-z^-1));
 D=z^-1/na;
-hz1=A*B*C*D;
+%hz1=A*B*C*D;
 %[hznum1, hzden1, ~] = tfdata(hz1,'v');
 [hznumA, hzdenA, ~] = tfdata(A,'v');
 [hznumB, hzdenB, ~] = tfdata(B,'v');

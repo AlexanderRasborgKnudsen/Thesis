@@ -2,14 +2,20 @@
 %--------------------------------------------------------
 \usepackage[T1]{fontenc} 	% Can use danish characters
 \usepackage[utf8]{inputenc} % Input encoding. Can be used on Linux, Mac and Windows         
-\usepackage[english]{babel} % Split words accoding to English
+\usepackage[english]{babel} 	% Split words accoding to English
 \usepackage{lmodern} 		% Font
+
+\usepackage[activate={true ,nocompatibility}, final, tracking=true, kerning=true, spacing=true, factor=1100 ,stretch=10, shrink=10]{microtype}
+
 
 % Enumeration
 %-------------------------------------------------------------------
 % Use both packages
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
+% \setlist{noitemsep}
+\setlist[1]{itemsep=-5pt}
+\setlist{topsep=-10pt}
 %-------------------------------------------------------------------
 
 % Indent on empty line break (more than 1)
@@ -21,7 +27,6 @@
 % Microtype package
 %-------------------------------------------------------------------
 % See http://www.khirevich.com/latex/microtype/ for explanation
-\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 
 \SetExtraKerning[unit=space]
     {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}

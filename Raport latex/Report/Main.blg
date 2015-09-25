@@ -1,0 +1,19 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
+A level-1 auxiliary file: Abstract.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: Background.aux
+A level-1 auxiliary file: Hardware.aux
+A level-1 auxiliary file: PulseAnalysis.aux
+A level-1 auxiliary file: SystemDesign.aux
+A level-1 auxiliary file: ResultsandDiscussion.aux
+A level-1 auxiliary file: ConclusionandFutureWork.aux
+The style file: ieeetr.bst
+Database file #1: Referencer.bib
+Warning--entry type for "Detector" isn't style-file defined
+--line 3 of file Referencer.bib
+You're missing a field name---line 26 of file Referencer.bib
+ :     
+ :     %note     = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There was 1 error message)

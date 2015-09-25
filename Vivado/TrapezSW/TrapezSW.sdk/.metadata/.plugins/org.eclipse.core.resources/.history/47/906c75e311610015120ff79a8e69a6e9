@@ -1,0 +1,36 @@
+/*
+ * Hysterese.h
+ *
+ *  Created on: 17/09/2015
+ *      Author: Alexander
+ */
+
+#ifndef HYSTERESE_H_
+#define HYSTERESE_H_
+
+class Hysterese
+{
+private:
+	const static int FILE_SIZE = 12164;
+	short hyst_value;
+	int threshold;
+
+public:
+	Hysterese(void) {
+		threshold = 20;
+	}
+
+	inline short hyst(double difference) {
+		if (difference > threshold || difference < -threshold) {
+			hyst_value = 1;
+		}
+		else {
+			hyst_value = 0;
+		}
+		return hyst_value;
+	}
+};
+
+
+
+#endif /* HYSTERESE_H_ */

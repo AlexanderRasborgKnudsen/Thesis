@@ -1,0 +1,2130 @@
+11:52:22 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:52:33 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:53:14 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:54:32 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:51:19 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:53:14 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:54:37 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:52:22: error: invalid conversion from 'short int' to 'void*' [-fpermissive]
+   memset(input[0] = 0);
+                      ^
+../src/main.cc:52:22: error: too few arguments to function 'void* memset(void*, int, size_t)'
+In file included from c:\xilinx\sdk\2015.2\gnu\arm\nt\arm-xilinx-eabi\include\stdio.h:29:0,
+                 from ../src/main.cc:1:
+c:\xilinx\sdk\2015.2\gnu\arm\nt\arm-xilinx-eabi\include\string.h:25:7: note: declared here
+ _PTR  _EXFUN(memset,(_PTR, int, size_t));
+       ^
+make: *** [src/main.o] Fejl 1
+12:54:54 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:52:17: error: invalid conversion from 'short int' to 'void*' [-fpermissive]
+   memset(input[0], 0);
+                 ^
+../src/main.cc:52:21: error: too few arguments to function 'void* memset(void*, int, size_t)'
+   memset(input[0], 0);
+                     ^
+In file included from c:\xilinx\sdk\2015.2\gnu\arm\nt\arm-xilinx-eabi\include\stdio.h:29:0,
+                 from ../src/main.cc:1:
+c:\xilinx\sdk\2015.2\gnu\arm\nt\arm-xilinx-eabi\include\string.h:25:7: note: declared here
+ _PTR  _EXFUN(memset,(_PTR, int, size_t));
+       ^
+make: *** [src/main.o] Fejl 1
+12:55:02 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:52:17: error: invalid conversion from 'short int' to 'void*' [-fpermissive]
+   memset(input[0], 0, 1);
+                 ^
+In file included from c:\xilinx\sdk\2015.2\gnu\arm\nt\arm-xilinx-eabi\include\stdio.h:29:0,
+                 from ../src/main.cc:1:
+c:\xilinx\sdk\2015.2\gnu\arm\nt\arm-xilinx-eabi\include\string.h:25:7: note: initializing argument 1 of 'void* memset(void*, int, size_t)'
+ _PTR  _EXFUN(memset,(_PTR, int, size_t));
+       ^
+make: *** [src/main.o] Fejl 1
+12:55:36 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:48:9: warning: variable 'energyAvg' set but not used [-Wunused-but-set-variable]
+   short energyAvg = 0;
+         ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34364	  26524	  22628	  83516	  1463c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:55:40 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:26:51 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:32:20: error: 'init_platform' was not declared in this scope
+      init_platform();
+                    ^
+make: *** [src/main.o] Fejl 1
+14:27:25 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:2:22: fatal error: platform.h: No such file or directory
+ #include <platform.h>
+                      ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+14:27:42 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:2:22: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+                      ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+14:31:47 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:32:20: error: 'init_platform' was not declared in this scope
+      init_platform();
+                    ^
+make: *** [src/main.o] Fejl 1
+14:32:22 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:2:22: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+                      ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+14:38:53 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:83:32: error: too many arguments to function 'void print(const char8*)'
+   print("energyAvg=", energyAvg);
+                                ^
+In file included from ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xil_io.h:65:0,
+                 from ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xgpio_l.h:84,
+                 from ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xgpio.h:118,
+                 from ../src/main.cc:4:
+../../Trapez_SW_bsp/ps7_cortexa9_0/include/xil_printf.h:36:6: note: declared here
+ void print( const char8 *ptr);
+      ^
+make: *** [src/main.o] Fejl 1
+14:39:07 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:83:33: warning: too many arguments for format [-Wformat-extra-args]
+   printf("energyAvg=", energyAvg);
+                                 ^
+../src/main.cc:83:33: warning: too many arguments for format [-Wformat-extra-args]
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67472	  26652	  22644	 116768	  1c820	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+14:39:55 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67464	  26652	  22644	 116760	  1c818	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+14:41:05 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:34:24: warning: unused variable 'ConfigPtr' [-Wunused-variable]
+      XScuTimer_Config *ConfigPtr;
+                        ^
+../src/main.cc:35:17: warning: unused variable 'TimerInstancePtr' [-Wunused-variable]
+      XScuTimer *TimerInstancePtr = &Timer;
+                 ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67528	  26652	  22644	 116824	  1c858	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+14:42:40 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:40:8: error: 'Status' was not declared in this scope
+        Status = XScuTimer_CfgInitialize (TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+        ^
+make: *** [src/main.o] Fejl 1
+14:48:46 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68668	  26660	  22644	 117972	  1ccd4	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+14:49:37 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68668	  26660	  22644	 117972	  1ccd4	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+14:49:46 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68668	  26660	  22644	 117972	  1ccd4	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+15:41:54 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68692	  26660	  22644	 117996	  1ccec	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:07:51 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:36:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	  26660	  22644	 118100	  1cd54	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:13:08 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:13:55 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:14:14 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:14:39 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	  26660	  22644	 118100	  1cd54	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:14:50 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	  26660	  22644	 120836	  1d804	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:14:53 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:15:14 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:36:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	  26660	  22644	 120836	  1d804	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:15:44 **** Clean-only build of configuration Debug for project Trapez_SW ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  Trapez_SW.elf.size  Trapez_SW.elf
+' '
+12:15:44 **** Clean-only build of project Trapez_SW_bsp ****
+make -k clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+12:15:45 **** Build of project Trapez_SW_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+12:15:58 **** Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:36:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	  26660	  22644	 120836	  1d804	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:33:18 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	  26660	  22644	 120836	  1d804	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:46:02 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:46:50 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:49:22 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:50:33 **** Build of configuration Debug for project Helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Helloworld.elf  |tee "Helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22888	   1152	  22564	  46604	   b60c	Helloworld.elf
+'Finished building: Helloworld.elf.size'
+' '
+12:50:45 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:52:29 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:52:29 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:53:45 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:53:46 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:55:33 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	  26660	  22644	 120836	  1d804	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:55:39 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:55:39 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:55:46 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:55:46 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:56:56 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:57:01 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:57:09 **** Clean-only build of configuration Debug for project Trapez_SW ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  Trapez_SW.elf.size  Trapez_SW.elf
+' '
+12:57:09 **** Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:57:14 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:57:15 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:57:38 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:57:42 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:57:42 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:58:18 **** Build of configuration Debug for project Trapez ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Trapez.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez.elf  |tee "Trapez.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22888	   1152	  22564	  46604	   b60c	Trapez.elf
+'Finished building: Trapez.elf.size'
+' '
+12:58:41 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:58:41 **** Incremental Build of configuration Debug for project Trapez ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:58:41 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:59:53 **** Auto Build of configuration Debug for project Trapez ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:00:01 **** Clean-only build of configuration Debug for project Trapez ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  Trapez.elf.size  Trapez.elf
+' '
+13:00:02 **** Auto Build of configuration Debug for project Trapez ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Trapez_SW_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_SW_bsp\ps7_cortexa9_0\libsrc\standalone_v5_1\src/xil-crt0.S:128: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Trapez.elf] Fejl 1
+13:00:08 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:00:08 **** Incremental Build of configuration Debug for project Trapez ****
+make all 
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Trapez_SW_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_SW_bsp\ps7_cortexa9_0\libsrc\standalone_v5_1\src/xil-crt0.S:128: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Trapez.elf] Fejl 1
+13:00:09 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:00:43 **** Clean-only build of configuration Debug for project Trapez ****
+make clean 
+rm -rf  ./src/platform.o  ./src/platform.d  Trapez.elf.size  Trapez.elf
+' '
+13:00:43 **** Auto Build of configuration Debug for project Trapez ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Trapez_SW_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_SW_bsp\ps7_cortexa9_0\libsrc\standalone_v5_1\src/xil-crt0.S:128: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Trapez.elf] Fejl 1
+13:01:46 **** Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19388	   1152	  22572	  43112	   a868	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:02:41 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39204	   2192	  22628	  64024	   fa18	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:03:05 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:03:05 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:03:06 **** Incremental Build of configuration Debug for project Trapez ****
+make all 
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Trapez_SW_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_SW_bsp\ps7_cortexa9_0\libsrc\standalone_v5_1\src/xil-crt0.S:128: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Trapez.elf] Fejl 1
+13:03:06 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:04:21 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:10:18 **** Clean-only build of configuration Debug for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+13:10:18 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:2:22: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+                      ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+13:10:27 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	   2332	  22676	  93804	  16e6c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:10:39 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:10:39 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:10:40 **** Incremental Build of configuration Debug for project Trapez ****
+make all 
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Trapez_SW_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_SW_bsp\ps7_cortexa9_0\libsrc\standalone_v5_1\src/xil-crt0.S:128: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Trapez.elf] Fejl 1
+13:10:40 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:11:43 **** Clean-only build of configuration Debug for project Helloworld ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  Helloworld.elf.size  Helloworld.elf
+' '
+13:11:43 **** Clean-only build of configuration Debug for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+13:11:43 **** Clean-only build of configuration Debug for project Trapez_SW ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  Trapez_SW.elf.size  Trapez_SW.elf
+' '
+13:11:43 **** Clean-only build of project Trapez_SW_bsp ****
+make -k clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+13:11:44 **** Build of project Trapez_SW_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+13:11:56 **** Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+13:11:56 **** Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	   2332	  22676	  93804	  16e6c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:11:57 **** Build of configuration Debug for project Helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Helloworld.elf  |tee "Helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22888	   1152	  22564	  46604	   b60c	Helloworld.elf
+'Finished building: Helloworld.elf.size'
+' '
+13:12:25 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cc:11:
+../src/Tools.h:41:2: error: expected unqualified-id before 'return'
+  return 0;
+  ^
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+make: *** [src/main.o] Fejl 1
+13:12:43 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+13:12:48 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:12:49 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:12:49 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:13:02 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:13:02 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:13:03 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:17:59 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	   2332	 276628	 347756	  54e6c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:19:27 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:19:33 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:19:33 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:19:33 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:21:25 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	   2332	1063060	1134188	 114e6c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:21:58 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: fatal error: TPE_38_1_mod_3.txt: No such file or directory
+ #include "TPE_38_1_mod_3.txt"
+                              ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+13:25:45 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: fatal error: TPE_38_1_mod_3.txt: No such file or directory
+ #include "TPE_38_1_mod_3.txt"
+                              ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+13:25:51 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: fatal error: TPE_38_1_mod_3.txt: No such file or directory
+ #include "TPE_38_1_mod_3.txt"
+                              ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+13:26:45 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:26:45 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	  26660	1063028	1158484	 11ad54	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+13:26:46 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:27:24 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:27:24 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+13:27:25 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:07:13 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68860	  26664	1257664	1353188	 14a5e4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+14:07:23 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:07:24 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:07:24 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:09:26 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68860	  26664	1257664	1353188	 14a5e4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+14:09:29 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:09:29 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:09:30 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:09:41 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:09:42 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:09:42 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:10:51 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68860	  26664	 217280	 312804	  4c5e4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+14:10:55 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:10:55 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:10:55 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:11:30 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68860	  26664	1257664	1353188	 14a5e4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+14:11:35 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:11:35 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:11:35 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:12:01 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:12:02 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:12:02 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+14:50:23 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68796	  26660	1063028	1158484	 11ad54	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:15:00 **** Build of project Trapez_SW_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+10:15:13 **** Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71532	   2332	  22676	  96540	  1791c	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+10:15:15 **** Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:84:26: error: 'CntValue' was not declared in this scope
+   printf("timer %d\r\n", CntValue);
+                          ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+make: *** [src/main.o] Fejl 1
+10:15:15 **** Build of configuration Debug for project Helloworld ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Helloworld.elf  |tee "Helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22888	   1152	  22564	  46604	   b60c	Helloworld.elf
+'Finished building: Helloworld.elf.size'
+' '
+10:17:05 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:27:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:11:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68868	  26660	1063028	1158556	 11ad9c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:40:13 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:40:14 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:40:14 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:42:01 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:42:01 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:42:02 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:42:43 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:42:43 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:42:44 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:44:28 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:44:28 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:44:29 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:44:52 **** Auto Build of configuration Debug for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:25:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:9:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68876	  26660	1063028	1158564	 11ada4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:44:56 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:44:56 **** Incremental Build of configuration Debug for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:44:56 **** Incremental Build of configuration Debug for project Helloworld ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:31:07 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:25:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:9:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+In file included from ../src/main.cpp:10:0:
+../src/Energy_Calc.h: In function 'int main()':
+../src/Energy_Calc.h:38:14: warning: 'CalcEnergy.Energy::counter' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     counter++;
+              ^
+../src/main.cpp:61:10: note: 'CalcEnergy.Energy::counter' was declared here
+   Energy CalcEnergy = Energy();
+          ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67372	  26660	1063036	1157068	 11a7cc	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+11:31:32 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:25:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:9:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+In file included from ../src/main.cpp:10:0:
+../src/Energy_Calc.h: In function 'int main()':
+../src/Energy_Calc.h:38:14: warning: 'CalcEnergy.Energy::counter' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     counter++;
+              ^
+../src/main.cpp:61:10: note: 'CalcEnergy.Energy::counter' was declared here
+   Energy CalcEnergy = Energy();
+          ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67372	  26660	1063036	1157068	 11a7cc	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+11:33:05 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:25:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:9:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+In file included from ../src/main.cpp:10:0:
+../src/Energy_Calc.h: In function 'int main()':
+../src/Energy_Calc.h:38:14: warning: 'CalcEnergy.Energy::counter' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     counter++;
+              ^
+../src/main.cpp:61:10: note: 'CalcEnergy.Energy::counter' was declared here
+   Energy CalcEnergy = Energy();
+          ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67360	  26660	1063036	1157056	 11a7c0	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+11:43:00 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:43:01 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:58:31 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:58:51 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+11:59:50 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:01:26 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:26:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/main.cpp:12:0:
+../src/DTS_energy.h:31:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  short threshold = 20;
+                    ^
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:73:10: error: 'result' was not declared in this scope
+   memset(result, 0, FILE_SIZE);
+          ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:9:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+make: *** [src/main.o] Fejl 1
+12:01:44 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:26:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/main.cpp:12:0:
+../src/DTS_energy.h:31:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  short threshold = 20;
+                    ^
+In file included from ../src/Trapez_filter.h:11:0,
+                 from ../src/main.cpp:9:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:02:22 **** Auto Build of configuration Debug for project Trapez_SW ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Trapez_SW.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_SW.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_SW.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_SW.elf  |tee "Trapez_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71440	   2332	  22676	  96448	  178c0	Trapez_SW.elf
+'Finished building: Trapez_SW.elf.size'
+' '
+12:02:30 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:02:30 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:03:38 **** Clean-only build of configuration Release for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+12:03:38 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:7:18: fatal error: Diff.h: No such file or directory
+ #include "Diff.h"
+                  ^
+compilation terminated.
+make: *** [src/main.o] Fejl 1
+12:05:05 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:19:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/main.cpp:7:0:
+../src/DTS_energy.h:31:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  short threshold = 20;
+                    ^
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:61:24: error: 'FILE_SIZE' was not declared in this scope
+   for (int i = 0; i < (FILE_SIZE); i++) {
+                        ^
+make: *** [src/main.o] Fejl 1
+12:05:59 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:18:30: warning: extra tokens at end of #include directive
+ #include "TPE_38_1_mod_3.txt";
+                              ^
+In file included from ../src/main.cpp:6:0:
+../src/DTS_energy.h:31:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  short threshold = 20;
+                    ^
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:06:11 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:6:0:
+../src/DTS_energy.h:31:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  short threshold = 20;
+                    ^
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:06:47 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:6:0:
+../src/DTS_energy.h:31:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  short threshold = 20;
+                    ^
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:07:29 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:07:39 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:07:39 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:08:09 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:08:09 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:08:33 **** Clean-only build of configuration Release for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+12:08:33 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:08:36 **** Clean-only build of configuration Release for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+12:08:36 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:08:43 **** Clean-only build of configuration Release for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+12:08:43 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/DTS_energy.h:15:0,
+                 from ../src/main.cpp:6:
+../src/Tools.h: In member function 'short int ZeroCheck::zerocheck(short int)':
+../src/Tools.h:40:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67156	  26660	1063036	1156852	 11a6f4	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:09:13 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67068	  26660	1063036	1156764	 11a69c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+12:09:19 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:09:19 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:09:52 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+12:09:53 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+09:49:44 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+09:49:45 **** Clean-only build of configuration Release for project Trapez_CPP ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Trapez_CPP.elf.size  Trapez_CPP.elf
+' '
+09:49:45 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67068	  26660	1063036	1156764	 11a69c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+09:50:03 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+09:50:03 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+09:50:23 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+09:50:23 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.

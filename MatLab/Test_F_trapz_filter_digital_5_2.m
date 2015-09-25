@@ -19,8 +19,11 @@ tclk = 10;
 taupk = 10;
 taupk_top = 30;
 M = 4.192522265764161e-04;
+na = 100;
+nb = 400;
+b10 = -0.999580835647357;
 
-[outp,val,hznumA, hzdenA,hznumB, hzdenB,hznumC, hzdenC,hznumD, hzdenD, na, nb] = F_trapz_filter_digital_1(Data,tclk,M,taupk,taupk_top);
+[outp] = F_trapz_filter_digital_1(Data,na,nb,b10);
 
 figure(2)
 

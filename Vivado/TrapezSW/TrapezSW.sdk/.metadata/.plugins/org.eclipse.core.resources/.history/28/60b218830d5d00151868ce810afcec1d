@@ -1,0 +1,17 @@
+
+class Diff
+{
+private:
+	short difference;
+
+public:
+	Diff(void) {
+		difference = 0;
+	}
+
+	short Diff::diff(short Trapez, short TrapezOld) {
+		difference = abs(Trapez - TrapezOld);
+		return difference;
+
+	}
+};

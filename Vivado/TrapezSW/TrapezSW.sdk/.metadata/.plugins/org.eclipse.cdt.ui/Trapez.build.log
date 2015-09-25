@@ -1,0 +1,12 @@
+13:10:40 **** Incremental Build of configuration Debug for project Trapez ****
+make all 
+'Building target: Trapez.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Trapez_SW_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Alexander\Documents\GitHub\Thesis\Vivado\TrapezSW\TrapezSW.sdk\Trapez_SW_bsp\ps7_cortexa9_0\libsrc\standalone_v5_1\src/xil-crt0.S:128: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Trapez.elf] Fejl 1
+
+13:10:40 Build Finished (took 230ms)
+

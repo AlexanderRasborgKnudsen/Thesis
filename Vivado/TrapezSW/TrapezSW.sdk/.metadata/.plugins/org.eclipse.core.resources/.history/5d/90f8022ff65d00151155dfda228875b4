@@ -1,0 +1,46 @@
+/*
+ * Tools.h
+ *
+ *  Created on: 17/09/2015
+ *      Author: Alexander
+ */
+
+#ifndef TOOLS_H_
+#define TOOLS_H_
+
+class ZeroCheck {
+private:
+	short state;
+
+public:
+	ZeroCheck(void) { state = 0; }
+
+short zerocheck(short value) {
+	switch (state)  {
+	case 0:
+		if (value > 0){
+			state = 1;
+			return value;
+		}
+		else{
+			return 0;
+		}
+		break;
+	case 1:
+
+		if (value < 0){
+			state = 0;
+			return 0;
+		}
+		else{
+			return value;
+		}
+		break;
+	}
+	}
+	return 0;
+};
+
+
+
+#endif /* TOOLS_H_ */

@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "XScuTimer.h"
+#include "stdio.h"
+#include "DTS_energy.h"
+
+using namespace std;
+
+//====================================================
+#define ONE_SECOND 333000000 // half of the CPU clock speed
+
+
+
+// FILE_SIZE = 12164;
+short input[12164] =
+{
+#include "TPE_38_1_mod_3.txt"
+};
+
+
+
+int main(void)
+{
+	  	XScuTimer Timer;		/* Cortex A9 SCU Private Timer Instance */
+	  	// PS Timer related definitions
+	    XScuTimer_Config *ConfigPtr;
+    	XScuTimer *TimerInstancePtr = &Timer;
+    	int CntValue_start, CntValue_stop, Status, time;
+    	short a;
+
+
+  	    // Initialize the timer
+  	    ConfigPtr = XScuTimer_LookupConfig (XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+  	    Status = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+  	    if(Status != XST_SUCCESS){
+  		    printf("Timer init() failed\r\n");
+  		    return XST_FAILURE;
+  	    }
+
+  	    // Load timer with delay in multiple of ONE_SECOND
+  	    XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND); //ONE_SECOND
+  	    // Set AutoLoad mode
+  	    XScuTimer_EnableAutoReload(TimerInstancePtr);
+
+	  	printf("-- Start of the Program --\r\n");
+
+
+		// Create instance of DTS Energy
+	  	DTS_energy myDTS = DTS_energy();
+
+	  	const static short FILE_SIZE = 12164;
+		short energyPeak = 0;
+		short energyAvg = 0;
+		input[0] = 0;
+
+		// Start of timer
+		XScuTimer_Start (TimerInstancePtr);
+		CntValue_start = XScuTimer_GetCounterValue(TimerInstancePtr);
+
+		for (int i = 0; i < (FILE_SIZE); i++) {
+
+			// output of the filter i stored in the result array
+			a = input[i];
+			a = a - 1500;
+			energyPeak = myDTS.filter(a);
+			if (energyPeak != -1) {
+				energyAvg = energyPeak;
+			}
+		}
+
+		// End of timer
+		XScuTimer_Stop(TimerInstancePtr);
+		CntValue_stop = XScuTimer_GetCounterValue(TimerInstancePtr);
+		time = (CntValue_start - CntValue_stop) * 3;
+		printf("time in ns: %d\r\n", time);
+
+		printf("Energy: %2d \n", energyAvg);
+		printf("-- End of Program --\r\n");
+		return 0;
+}

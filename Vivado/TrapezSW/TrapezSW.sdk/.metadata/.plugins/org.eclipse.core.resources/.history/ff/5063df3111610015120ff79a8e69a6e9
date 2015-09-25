@@ -1,0 +1,33 @@
+/*
+ * Diff.h
+ *
+ *  Created on: 17/09/2015
+ *      Author: Alexander
+ */
+
+#ifndef DIFF_H_
+#define DIFF_H_
+
+#include <math.h>
+
+class Diff
+{
+private:
+	short difference;
+
+public:
+	Diff(void) {
+		difference = 0;
+	}
+
+	inline short diff(short Trapez, short TrapezOld) {
+		difference = Trapez - TrapezOld;
+		return difference;
+
+	}
+};
+
+
+
+
+#endif /* DIFF_H_ */

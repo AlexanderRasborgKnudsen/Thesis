@@ -1,10 +1,12 @@
-\documentclass[English, oneside, 12pt]{article}
+\documentclass[English, oneside, 12pt]{memoir}
 
 \input{Preamble}
-
+\title{Thesis}
+\author{Alexander Rasborg Knudsen}
+\date{\today}
 \begin{document}
 	
-\include{Frontpage}
+\input{Frontpage}
 \maketitle
 
 \newpage
@@ -12,18 +14,27 @@
 \include{Abstract}
 
 \tableofcontents 	% Table of Contents
-% \listoffixmes 	%See LatexModule 
-\thispagestyle{firststyle}
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\listoffixmes 	%See LatexModule 
 
 \newpage
+\include{Introduction}
+\include{Background}
+\include{Hardware and Software}
+\include{PulseAnalysis}
+\include{SystemDesign}
+\include{ResultsandDiscussion}
+\include{ConclusionandFutureWork}
 
 
-
-% \newpage	
+%\newpage	
 % \appendix
 
-% \bibliographystyle{ieeetr}
-% \bibliography{Referencer}
+\bibliographystyle{ieeetr}
+\bibliography{Referencer}
 
 
 \end{document}
