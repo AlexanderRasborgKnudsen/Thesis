@@ -1,3 +1,58 @@
+% Notice:
+% This .tex-file will only work with the memoir-package.
+% It relies on the \begin-end{titlingpage}
+
+\begin{titlingpage}
+	\begin{center}
+		
+		\textsc{\Large \ProjectType}\\[0.25cm]
+		
+		
+		% Title
+		\HRule \\[0.4cm]
+		{ \huge \bfseries \ProjectName}\\[0.4cm]
+		
+		\HRule \\[0.5cm]
+		
+		\begin{tabular}{p{0.15\textwidth} | p{0.8\textwidth}}
+			\hline 
+			Author: & Alexander Rasborg Knudsen\\ 
+			\hline
+			Supervisor: & Kim Bjerge, Associate Professor\\
+			\hline 
+			Page count: & \pageref{LastPage} \\
+			\hline 
+			Location: & Aarhus University, \today \\
+			\hline
+		\end{tabular} 
+		\begin{figure}[hbtp]
+			\centering
+			\includegraphics[width=0.5\textwidth]{ZedBoard}
+			\label{fig:frontpage}
+		\end{figure}
+	\end{center}
+	
+	
+	% Signatures
+	\begin{Authors}
+		
+		\AT
+		{Alexander Rasborg Knudsen}
+		{20107083}
+		{Electrical Engineering}
+		
+		&& % split between two signatures
+
+		\AT
+		{Kim Bjerge}
+		{Assoc Prof}
+		{Supervisor}
+
+		
+	\end{Authors}
+	
+	
+\end{titlingpage}
 
 
 
