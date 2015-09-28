@@ -2128,3 +2128,254 @@ make: Ingenting at gøre for 'all'.
 09:50:23 **** Incremental Build of configuration Release for project Trapez_CPP ****
 make all 
 make: Ingenting at gøre for 'all'.
+10:07:17 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:08:10 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:15:06 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:66:31: error: no matching function for call to 'DTS_energy::filter(short int&)'
+    energyPeak = myDTS.filter(a);
+                               ^
+../src/main.cpp:66:31: note: candidate is:
+In file included from ../src/main.cpp:6:0:
+../src/DTS.h:104:8: note: short int DTS_energy::filter(short int, short int&)
+  short filter(short sample, short &energy)
+        ^
+../src/DTS.h:104:8: note:   candidate expects 2 arguments, 1 provided
+make: *** [src/main.o] Fejl 1
+10:17:33 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:51:5: error: 'DTS' was not declared in this scope
+     DTS myDTS = DTS();
+     ^
+../src/main.cpp:67:17: error: 'myDTS' was not declared in this scope
+    energyPeak = myDTS.filter(a);
+                 ^
+make: *** [src/main.o] Fejl 1
+10:17:54 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:67:31: error: no matching function for call to 'DTS_energy::filter(short int&)'
+    energyPeak = myDTS.filter(a);
+                               ^
+../src/main.cpp:67:31: note: candidate is:
+In file included from ../src/main.cpp:6:0:
+../src/DTS.h:104:8: note: short int DTS_energy::filter(short int, short int&)
+  short filter(short sample, short &energy)
+        ^
+../src/DTS.h:104:8: note:   candidate expects 2 arguments, 1 provided
+make: *** [src/main.o] Fejl 1
+10:19:52 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:6:0:
+../src/DTS.h: In member function 'short int DTS_energy::filter(short int)':
+../src/DTS.h:134:3: error: 'energy' was not declared in this scope
+   energy = -1;
+   ^
+../src/DTS.h:169:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+make: *** [src/main.o] Fejl 1
+10:20:28 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67016	  26656	1063036	1156708	 11a664	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:20:42 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:20:43 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:21:09 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:21:10 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:23:36 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:67:4: error: 'average' was not declared in this scope
+    average = myDTS.average(a)
+    ^
+make: *** [src/main.o] Fejl 1
+10:23:42 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:67:4: error: 'average' was not declared in this scope
+    average = myDTS.average(a);
+    ^
+make: *** [src/main.o] Fejl 1
+10:24:01 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67220	  26656	1063036	1156912	 11a730	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:24:08 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:24:09 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:25:21 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67220	  26656	1063036	1156912	 11a730	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:26:03 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67220	  26656	1063036	1156912	 11a730	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:26:52 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:56:9: warning: unused variable 'average' [-Wunused-variable]
+   short average = 0;
+         ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67068	  26660	1063036	1156764	 11a69c	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:26:57 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:26:57 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:27:27 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:27:27 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:28:32 **** Auto Build of configuration Release for project Trapez_CPP ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../Trapez_SW_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: Trapez_CPP.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Trapez_SW_bsp/ps7_cortexa9_0/lib -o "Trapez_CPP.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Trapez_CPP.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size Trapez_CPP.elf  |tee "Trapez_CPP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67220	  26656	1063036	1156912	 11a730	Trapez_CPP.elf
+'Finished building: Trapez_CPP.elf.size'
+' '
+10:28:37 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:28:37 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:29:01 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:29:02 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:29:25 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:29:26 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:29:47 **** Incremental Build of configuration Debug for project Trapez_SW ****
+make all 
+make: Ingenting at gøre for 'all'.
+10:29:47 **** Incremental Build of configuration Release for project Trapez_CPP ****
+make all 
+make: Ingenting at gøre for 'all'.

@@ -1,6 +1,6 @@
-09:50:23 **** Incremental Build of configuration Debug for project Trapez_SW ****
+10:29:47 **** Incremental Build of configuration Debug for project Trapez_SW ****
 make all 
 make: Ingenting at gøre for 'all'.
 
-09:50:23 Build Finished (took 130ms)
+10:29:47 Build Finished (took 132ms)
 

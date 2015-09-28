@@ -3,7 +3,7 @@
 #include "xgpio.h"
 #include "XScuTimer.h"
 #include "stdio.h"
-#include "DTS.h"
+#include "DTS_energy.h"
 
 using namespace std;
 
@@ -65,8 +65,8 @@ int main(void)
 			// output of the filter i stored in the result array
 			a = input[i];
 			a = a - 1500;
-			average = myDTS.average(a);
-			energyPeak = myDTS.filter(average);
+			//average = myDTS.average(a);
+			energyPeak = myDTS.filter(a);
 			if (energyPeak != -1) {
 				energyAvg = energyPeak;
 			}

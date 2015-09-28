@@ -47,13 +47,12 @@ int main(void)
 
 
 		// Create instance of DTS Energy
+	  	//DTS_energy myDTS = DTS_energy();
 	  	DTS_energy myDTS = DTS_energy();
 
-	  	// Initialize
 	  	const static short FILE_SIZE = 12164;
 		short energyPeak = 0;
 		short energyAvg = 0;
-		short average = 0;
 		input[0] = 0;
 
 		// Start of timer

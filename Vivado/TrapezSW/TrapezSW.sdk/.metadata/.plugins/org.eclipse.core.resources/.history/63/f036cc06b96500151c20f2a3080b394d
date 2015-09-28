@@ -3,7 +3,7 @@
 #include "xgpio.h"
 #include "XScuTimer.h"
 #include "stdio.h"
-#include "DTS.h"
+#include "DTS_energy.h"
 
 using namespace std;
 
@@ -49,11 +49,9 @@ int main(void)
 		// Create instance of DTS Energy
 	  	DTS_energy myDTS = DTS_energy();
 
-	  	// Initialize
 	  	const static short FILE_SIZE = 12164;
 		short energyPeak = 0;
 		short energyAvg = 0;
-		short average = 0;
 		input[0] = 0;
 
 		// Start of timer
@@ -65,8 +63,7 @@ int main(void)
 			// output of the filter i stored in the result array
 			a = input[i];
 			a = a - 1500;
-			average = myDTS.average(a);
-			energyPeak = myDTS.filter(average);
+			energyPeak = myDTS.filter(a);
 			if (energyPeak != -1) {
 				energyAvg = energyPeak;
 			}

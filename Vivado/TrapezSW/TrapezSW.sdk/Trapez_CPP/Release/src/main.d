@@ -13,8 +13,8 @@ src/main.o src/main.d: ../src/main.cpp \
  ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xil_printf.h \
  ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../Trapez_SW_bsp/ps7_cortexa9_0/include/XScuTimer.h \
- ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xscutimer_hw.h \
- ../src/DTS_energy.h ../src/Tools.h ../src/TPE_38_1_mod_3.txt
+ ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xscutimer_hw.h ../src/DTS.h \
+ ../src/TPE_38_1_mod_3.txt
 
 ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xparameters.h:
 
@@ -46,8 +46,6 @@ src/main.o src/main.d: ../src/main.cpp \
 
 ../../Trapez_SW_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:
 
-../src/DTS_energy.h:
-
-../src/Tools.h:
+../src/DTS.h:
 
 ../src/TPE_38_1_mod_3.txt:
